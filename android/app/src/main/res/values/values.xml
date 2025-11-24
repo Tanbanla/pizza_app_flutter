@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Firebase configuration values extracted from google-services.json -->
+    <string name="firebase_database_url" translatable="false">https://pizza-app-1581b-default-rtdb.firebaseio.com/</string>
+    <string name="gcm_defaultSenderId" translatable="false">900425014536</string>
+    <string name="google_app_id" translatable="false">1:900425014536:android:52309cc6025d52cf8e60bd</string>
+    <string name="google_api_key" translatable="false">AIzaSyAannBhxSmB3gby0sF2ue3o4fg8R9XRza0</string>
+    <string name="google_storage_bucket" translatable="false">pizza-app-1581b.firebasestorage.app</string>
+    <string name="project_id" translatable="false">pizza-app-1581b</string>
+</resources>

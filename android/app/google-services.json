@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "900425014536",
+    "project_id": "pizza-app-1581b",
+    "storage_bucket": "pizza-app-1581b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900425014536:android:52309cc6025d52cf8e60bd",
+        "android_client_info": {
+          "package_name": "com.example.pizza_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAannBhxSmB3gby0sF2ue3o4fg8R9XRza0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
