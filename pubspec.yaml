@@ -9,10 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  firebase_core: ^2.10.0
-  cloud_firestore: ^4.9.2
-  firebase_auth: ^4.4.0
-  firebase_storage: ^11.6.0
+  http: ^1.1.0
 
   bloc: ^8.1.0
   flutter_bloc: ^8.1.3
