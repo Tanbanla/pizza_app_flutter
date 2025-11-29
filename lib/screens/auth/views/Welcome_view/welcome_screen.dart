@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pizza_app/screens/auth/views/Welcome_view/welcome_next.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -14,7 +15,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       backgroundColor: Color(0xFFEF1C26),
       body: Container(
         child: Column(
-          crossAxisAlignment:  CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(height: 20),
@@ -33,30 +34,37 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
-            ),  
+            ),
             SizedBox(height: 50),
-            Container(
-              width: 200,
-              height: 50,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(25),
-              ),
-              child: Center(
-                child: Text(
-                  'Get Started',
-                  style: TextStyle(
-                    color: Color(0xFFEF1C26),
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => WelcomeNext()),
+                );
+              },
+              child: Container(
+                width: 200,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                child: Center(
+                  child: Text(
+                    'Get Started',
+                    style: TextStyle(
+                      color: Color(0xFFEF1C26),
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
-            )
-          ]
+            ),
+          ],
         ),
       ),
-      
     );
   }
 }
