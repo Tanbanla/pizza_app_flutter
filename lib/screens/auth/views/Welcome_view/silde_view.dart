@@ -50,24 +50,36 @@ class _SildeViewState extends State<SildeView> {
                 currentIndex = index;
               });
             },
-            children: const [
+            children: [
               creatPage(
                 img: 'template/img/slide1.png',
                 title: 'Get Delivered at your door step',
                 decp: 'Your food at your door step and just click on one step.',
                 buttonText: 'Next',
+                ontap: () {
+                  _pageController.nextPage(
+                    duration: Duration(milliseconds: 300),
+                    curve: Curves.easeIn,
+                  );
+                },
               ),
               creatPage(
                 img: 'template/img/slide2.png',
                 title: 'Pick Up Delivery at your door and enjoy',
                 decp: 'Your food at your door step and just click on one step.',
                 buttonText: 'Get Started',
+                ontap: () {
+                  _pageController.nextPage(
+                    duration: Duration(milliseconds: 300),
+                    curve: Curves.easeIn,
+                  );
+                },
               ),
-              SignOrScreen(),
+              const SignOrScreen(),
             ],
           ),
           Positioned(
-            bottom:30,
+            bottom: 30,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: _buildIndicator(),
@@ -111,12 +123,14 @@ class creatPage extends StatelessWidget {
   final String title;
   final String decp;
   final String buttonText;
+  final VoidCallback ontap;
   const creatPage({
     super.key,
     required this.img,
     required this.title,
     required this.decp,
     required this.buttonText,
+    required this.ontap,
   });
 
   @override
@@ -158,19 +172,14 @@ class creatPage extends StatelessWidget {
                 ),
               ),
             ),
-            
+
             // Button cố định
             Container(
               width: double.infinity,
               height: 50,
               margin: const EdgeInsets.only(bottom: 70),
               child: GestureDetector(
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => SignInScreen()),
-                  );
-                },
+                onTap: ontap,
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xFFEF1C26),
